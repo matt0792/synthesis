@@ -1,0 +1,7 @@
+1. Each content page has bookmark functionality
+2. "Save for Later" alert uses jQuery to show/hide
+3. Users can leave and edit comments on the bookmarks page, which are then stored in sessionStorage
+4. Likes are stored in sessionStorage 
+5. Other jQuery implementations 
+    - Dropdown in navbar 
+    - Animation on text and alerts 

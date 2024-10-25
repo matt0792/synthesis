@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Guide to Synthesis</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="full-screen">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3">
+        <div class="container p-0 ms-5 me-5">
+          <div class="my-auto">
+            <!-- Title -->
+            <a href="#" class="navbar-brand title"
+              >A Guide to Subtractive Synthesis</a
+            >
+          </div>
+          <!-- Hamburger menu is hidden unless on a very small screen -->
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navigation menu -->
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-5">
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle btn-link bg-transparent dropdown"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <!-- Dropdown to quickly skip to a step -->
+                    Steps
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#intro">Introduction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#oscillators"
+                        >Oscillators</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#filters">Filters</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#envelopes">Envelopes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#lfos">LFO's</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#effects">Effects</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#overview">Overview</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Link to my bookmarks page -->
+              <li class="nav-item ms-3">
+                <a href="bookmarks.html" class="nav-link mt-lg-0 ms-lg-5"
+                  >Bookmarks</a
+                >
+              </li>
+              <!-- Link to my resume website -->
+              <li class="nav-item ms-3">
+                <a
+                  href="https://matt0792.github.io/resume/"
+                  target="blank"
+                  class="nav-link mt-lg-0"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Horizontal scroll section -->
+      <!-- Consists of many blocks of content, laid out horizontally -->
+      <!-- Formatting is pretty much the same for all of them -->
+      <!-- I added comments for only the first one, to avoid unnecessary mess -->
+      <section class="content">
+        <!-- Block 1 -->
+        <div class="horizontal-scroll" id="horizontal-scroll">
+          <div class="content-block" id="block1">
+            <div
+              class="block-title ps-2 d-flex justify-content-between align-items-center"
+            >
+              <!-- Title -->
+              <h2 class="block-title-text">Introduction</h2>
+              <!-- Bookmark -->
+              <p
+                id="intro"
+                class="bookmark ms-auto"
+                data-id="bookmark1"
+                onClick="toggleBookmark(this)"
+              >
+                Save for Later <i class="bi bi-bookmark"></i>
+              </p>
+              <!-- Like -->
+              <p
+                id="like"
+                class="like ms-3"
+                data-id="like1"
+                onClick="toggleLike(this)"
+              >
+                Like <i class="bi bi-heart"></i>
+              </p>
+            </div>
+            <div class="block-desc ps-2 mt-4">
+              <!-- Text content -->
+              <p class="info">
+                <span class="emphasis"
+                  >Subtractive synthesis is a process of creating sound by
+                  shaping and melding harmonically rich waveforms</span
+                >, systematically chiseling away and adding frequencies with the
+                use of filters and effects.
+              </p>
+              <p>
+                Common starting waveforms are the saw, square, and triangle wave
+                - which all posses their own unique character.
+              </p>
+            </div>
+            <!-- Image -->
+            <div class="block-image ps-2 mt-4">
+              <img src="images/waveforms.png" alt="Waveforms Image" />
+              <!-- Image description -->
+              <div class="img-desc mt-2 ps-2">
+                A saw, square, and triangle wave
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/extraFunction.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </body>
+</html>

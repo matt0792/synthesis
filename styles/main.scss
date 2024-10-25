@@ -1,0 +1,249 @@
+body {
+  overflow: hidden;
+  font-family: "PT Mono", monospace !important;
+}
+
+// Generic block image styling
+img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  width: auto;
+}
+
+// general class to hide items
+.hidden {
+  display: none !important;
+}
+
+// Sets initial color before gradual shift
+.content-block,
+.block-title,
+.block-desc,
+.block-image {
+  border-color: black;
+  transition: border-color 0.3s ease;
+}
+
+// navbar styling
+.navbar {
+  border: 2px black solid;
+  margin: 10px;
+}
+
+// Nav brand styling (title)
+.navbar-brand {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+// Generic h1 styling
+h1 {
+  font-size: 20px !important;
+  font-weight: bolder;
+}
+
+// Bootstrap dropdown styling
+.dropdown {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+// sets content to fill vh, including navbar height
+.full-screen {
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+// content takes up rest of screen, minus navbar height
+.content {
+  height: calc(100vh - 92px - 10px);
+  margin: 5px;
+  overflow-y: auto;
+}
+
+// styling for content blocks
+.horizontal-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  height: 100%;
+}
+
+// Styling for content block
+.content-block {
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  border: 2px black solid;
+  border-top: none;
+  border-right: none;
+  margin: 5px;
+  padding: 25px;
+}
+
+// Generic content title styling
+.block-title {
+  border-left: 2px black solid;
+}
+
+// Generic content text styling
+.block-title-text {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+// Generic styling for important text
+.emphasis {
+  color: black;
+  font-weight: bold !important;
+}
+
+.block-desc {
+  @extend .block-title;
+  color: gray;
+}
+
+// Styling for testimony
+.quote {
+  @extend .block-title;
+  font-size: 25px;
+  color: rgb(100, 0, 255) !important;
+}
+
+// fallback styling for content block images
+.block-image {
+  @extend .block-title;
+}
+
+// Styling for image caption
+.img-desc {
+  color: gray;
+  font-size: 13px;
+}
+
+// Styling for "jump to next section" link
+.advance-box {
+  margin-top: auto;
+}
+
+.section-advance {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.section-advance i {
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.section-advance:hover i {
+  transform: translateX(7px);
+}
+
+// Styling for bookmark button
+.bookmark {
+  cursor: pointer;
+  user-select: none;
+}
+
+.bookmark-nav {
+  box-shadow: -3px 3px 5px blue, 3px -3px 5px deeppink;
+}
+
+// Styling for bookmark alert
+#alert {
+  position: absolute;
+  z-index: 9999;
+  top: 90vh;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.alert-text {
+  color: black;
+  padding: 5px 10px;
+  background-color: whitesmoke;
+  max-width: fit-content;
+  border-radius: 5px;
+  box-shadow: -5px 5px 4px blue, 5px -5px 4px deeppink;
+}
+
+// Styling below is for bookmark page
+
+// Styling for placeholder
+.placeholder-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+// Generic styling for bookmark display section
+.bookmark-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+// Bookmark card styling
+.card {
+  max-width: 500px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: -5px 5px 4px blue, 5px -5px 4px deeppink;
+}
+
+.card-link {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.like {
+  @extend .bookmark;
+}
+
+// Styling for bouncing testimony
+.bouncing-text {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+// Style for comment save button
+.save-button {
+  border: 1px gray solid;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
